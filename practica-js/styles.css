@@ -134,11 +134,15 @@ nav{
 .mobile-menu {
     position: absolute;
     top: 60px;
-    padding: 24px;
+    left: 0;
+    width: calc(100% - 24px);
+    padding-left: 24px;
     background: var(--white);
     z-index: 4;
     border: 1px solid #ddd;
-    /*display: flex;
+    
+    /*height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     height: 100vh;*/
@@ -180,16 +184,19 @@ nav{
     color: var(--hospital-green);
 }
 
-/* -----------Aside (Product detail carrito de compra) ------------*/
-.product-detail{
+/* -----------Aside General(Product detail y carrito de compra) ------------*/
+aside{
     width: 360px;
-    padding: 0 20px;
     position: absolute;
     right: 0;
     box-sizing: border-box;
     background: var(--white);
     
 }
+#shoppingCartContainer{
+    padding: 0 20px;
+}
+/* -----------Aside (carrito de compra) ------------*/
 .title-container{
     display: flex;
 }
@@ -266,6 +273,87 @@ nav{
     font-size: var(--md);
     font-weight: 700;
 }
+/* -----------Aside (Product detail) ------------*/
+.product-detail-close{
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 11px;
+    left: 10px;
+}
+
+.product-detail-close:hover{
+    cursor: pointer;
+}
+
+#productDetail > img:nth-child(2){
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+
+.point{
+    display: flex;
+    justify-content: center;
+}
+.point .points{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--very-light-pink);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.point .active{
+    background-color: var(--hospital-green);
+}
+
+#productDetail .product-info{
+    margin: 20px 20px 0 20px;
+}
+
+#productDetail .product-info p:nth-child(1){
+    font-weight: 700;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+#productDetail .product-info p:nth-child(2){
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: var(--very-light-pink);
+}
+#productDetail .product-info p:nth-child(3){
+    font-size: var(--md);
+    margin-top: 0px;
+    margin-bottom: 38px;
+    color: var(--very-light-pink);
+}
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    font-size: var(--md);
+    font-weight: 700;
+}
+.add-to-cart-buttom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*--------Styles Contenido Product List --------------*/
 .cards-container{
     display: grid;
@@ -283,30 +371,30 @@ nav{
     border-radius: 20px;
     object-fit: cover; /*adecua el tamaño de la imagen en el contendor*/
 }
-.product-info{
+.product-card .product-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 12px;
 }
-.product-info div p:nth-child(1){
+.product-card .product-info div p:nth-child(1){
     font-weight: 700;
     font-size: var(--md);
     margin-top: 0px;
     margin-bottom: 4px;
 }
 
-.product-info div p:nth-child(2){
+.product-card .product-info div p:nth-child(2){
     font-weight: 300;
     font-size: var(--sm);
     margin-top: 0px;
     margin-bottom: 0px;
     color: var(--very-light-pink);
 }
-.product-info figure{
+.product-card .product-info figure{
     margin: 0px;
 }
-.product-info figure img{
+.product-card .product-info figure img{
     width: 35px;
     height: 35px;
 }
@@ -322,7 +410,7 @@ nav{
     .navbar-right .navbar-email, .desktop-menu{
         display: none;
     }
-    .product-detail{
+    aside{
         width: 100%;
     }
 

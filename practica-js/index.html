@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--*********** Menu ***********-->
     <nav>
         <img src="./icons/icon_menu.svg" alt="icono_menu" class="menu" width="50">
         <div class="navbar-left">
@@ -59,7 +60,8 @@
         </div>
     </nav>
     
-    <aside class="product-detail inactive">
+    <!--*********** Detalle de la orden ***********-->
+    <aside id="shoppingCartContainer" class="inactive">
         <div class="title-container">
             <img src="./icons/flechita.svg" alt="arrow">
             <p class="title">Shopping cart</p>
@@ -107,6 +109,30 @@
         </div>
     </aside>
     
+    <!--*********** Detalle del producto ***********-->
+    <aside id="productDetail" class="inactive">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="close">
+        </div>
+        <img src="https://3ztech.com.co/wp-content/uploads/2022/11/pexels-sora-shimazaki-5926382.jpg" alt="computer">
+        
+        <div class="point">
+          <div class="points active"></div>
+          <div class="points"></div>
+          <div class="points"></div>
+        </div>
+
+        <div class="product-info">
+            <p>$120.00</p>
+            <p>Computer</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium blanditiis repudiandae eligendi possimus maxime beatae earum in, quam nam ad totam distinctio corrupti delectus ea. Harum commodi accusantium distinctio placeat.</p>
+            <button class="primary-button add-to-cart-buttom">
+                <img src="./icons/bt_add_to_cart.svg" alt="shopping-cart">
+                Add to cart
+            </button>
+        </div>
+    </aside>
+    <!--*********** Lista de productos ***********-->
     <section class="main-container">
         <div class="cards-container">
             <div class="product-card">
